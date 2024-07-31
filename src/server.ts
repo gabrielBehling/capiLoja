@@ -4,6 +4,7 @@ var path = require('path');
 var mustache = require('mustache-express');
 
 import mainRouter from './routes/index';
+import productsRouter from './routes/products';
 
 const server = express();
 
@@ -15,5 +16,10 @@ server.set('views', path.join(__dirname, 'views'));
 server.engine('mustache', mustache());
 
 server.use(mainRouter);
+server.use('/products', productsRouter);
+
+server.use((req, res) => {
+	res.render('pages/404');
+});
 
 server.listen(process.env.PORT);

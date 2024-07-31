@@ -1,9 +1,8 @@
 import { Router } from 'express';
+import { home } from '../controllers/pageController';
 
 var router = Router();
 
-router.get('/', (req, res) => {
-	res.send('Running');
-});
+router.get('/', home);
 
 export default router;
