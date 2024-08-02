@@ -19,8 +19,9 @@ create table Item (
     itemName varchar(50) not null,
     itemDescription varchar(200) not null,
     price decimal(10, 2) not null,
-    idVendedor int,
-    foreign key (idVendedor) references Client (idClient)
+	score decimal(3, 2),
+    idSeller int,
+    foreign key (idSeller) references Client (idClient)
 )
 go
 
@@ -78,4 +79,22 @@ as
     update Purchase
     set totalValue = totalValue - (ISNULL(@oldQuantity, 0) * @price) + (ISNULL(@newQuantity, 0) * @price)
     where idPurchase = @idPurchase
+go
+
+create trigger TRG_updateItemScore
+on Avaliation
+after insert, update, delete
+as
+    declare
+		@newItemScore decimal(3,2),
+		@idItem int
+
+	select @idItem = idItem from inserted
+	select @idItem = ISNULL(idItem, @idItem) from deleted
+
+    select @newItemScore = AVG(CONVERT(DECIMAL(3,2), score)) from Avaliation where idItem = @idItem
+
+	update Item
+	set score = @newItemScore
+	where idItem = @idItem
 go
