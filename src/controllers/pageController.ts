@@ -12,3 +12,12 @@ export const product = (req: Request, res: Response) => {
 	var id = req.params['id'];
 	res.render('pages/product', { id });
 };
+
+export const sellers = (req: Request, res: Response) => {
+	res.render('pages/sellers');
+};
+
+export const seller = (req: Request, res: Response) => {
+	var id = req.params['id'];
+	res.render('pages/seller', { id });
+};
