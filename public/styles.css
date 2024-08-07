@@ -44,7 +44,22 @@ html {
   width: 90px;
 }
 
-.nav-list {
-
+.search-bar {
   display: flex;
+  width: 20%;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  place-items: center;
+}
+
+.search-bar i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 80%;
 }
