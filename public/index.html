@@ -96,9 +96,13 @@
             <p>Capibara<br />Store</p>
           </a>
           <div class="search-bar">
-            <!-- Icon -->
-            <label for="search-text"></label>
-            <input type="search" name="search" id="search-text" />
+            <div class="search-dropdown">
+              <label for="search-filter">Select the category you're searching for</label>
+              <select name="search-filter" id="search-filter">
+                <option value=""></option>
+              </select>
+            </div>
+            <input type="search" name="search-text" id="search-text" />
             <!-- Icon -->
           </div>
           <a class="nav-link" href="#">
@@ -107,6 +111,14 @@
           </a>
         </nav>
       </header>
+      <footer>
+        <a class="footer-link" href="">Terms of Service</a>
+        <a class="footer-link" href="">Privacy Policy</a>
+        <a class="footer-link" href="">Project</a>
+        <span class="footer-text">Made by</span>
+        <a class="footer-link" href="">Tyxiel</a>
+        <a class="footer-link" href="">Gabriel Behling</a>
+      </footer>
     </main>
   </body>
 </html>
