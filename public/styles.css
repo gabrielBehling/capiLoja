@@ -49,6 +49,7 @@ html {
   display: flex;
   width: 30%;
   height: 50%;
+  place-content: center;
 }
 
 .search-dropdown {
@@ -59,7 +60,7 @@ html {
   place-items: center;
 }
 
-.search-bar i {
+.search-dropdown i {
   position: relative;
   top: 0;
   right: 0;
