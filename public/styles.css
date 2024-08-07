@@ -21,11 +21,11 @@ html {
   position: absolute;
   top: 0;
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: #94ac71;
-  place-content: center;
 }
 
 .logo-text-with-link {
@@ -33,6 +33,7 @@ html {
   place-items: center;
   text-decoration: none;
   color: #fef8ea;
+  height: 100%;
 }
 
 .logo-text-with-link p {
@@ -49,8 +50,24 @@ html {
 .search-bar {
   display: flex;
   width: 30%;
-  height: 50%;
-  place-content: center;
+  height: 100%;
+  justify-content: center;
+  place-self: center;
+}
+
+.search-bar select {
+  text-align: center;
+}
+
+.search-bar input {
+  height: 4.5rem;
+}
+
+.search-bar select {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-top-left-radius: 0.6rem;
+  border-bottom-left-radius: 0.6rem;
 }
 
 .search-dropdown {
@@ -67,4 +84,8 @@ html {
   right: 0;
   width: 80%;
   height: 80%;
+}
+
+.search-icon {
+  place-items: center;
 }

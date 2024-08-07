@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href=".\styles.css" />
-    <title>Capybara Store</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <meta
       name="description"
       content="Welcome to Capybara Store, find natural products without having to go to the forest."
@@ -84,6 +87,7 @@
       name="msapplication-TileImage"
       content="img/icons/ms-icon-144x144.png"
     />
+    <title>Capybara Store</title>
     <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
@@ -97,27 +101,29 @@
           </a>
           <div class="search-bar">
             <div class="search-dropdown">
-              <div class="dropdown-name">
-                <span></span>
-                <i class='bx bx-chevron-down' ></i>
-              </div>
-              <label for="search-filter" style="display: none">Select the category you're searching for</label>
+              <label for="search-filter" style="display: none"
+                >Select the category you're searching for</label
+              >
               <select name="search-filter" id="search-filter">
+                <option value="" selected disabled hidden>All</option>
                 <option value=""></option>
               </select>
             </div>
             <input type="search" name="search-text" id="search-text" />
-            <i class='bx bx-search' ></i>
+            <div class="search-icon">
+              <i class="bx bx-search bx-lg"></i>
+            </div>
           </div>
           <a class="nav-link" href="#">
-            <i class="bx bxs-cart"></i>
+            <i class="bx bx-cart"></i>
             <p>Cart</p>
           </a>
         </nav>
-        <!-- <nav class="sub-nav-bar">
-           anchor 
-          
+        <!--
+        <nav class="sub-nav-bar">
+          anchor 
         </nav> 
+        -->
       </header>
       <footer>
         <a class="footer-link" href="">Terms of Service</a>
@@ -126,7 +132,7 @@
         <span class="footer-text">Made by</span>
         <a class="footer-link" href="">Tyxiel</a>
         <a class="footer-link" href="">Gabriel Behling</a>
-      </footer>-->
+      </footer>
     </main>
   </body>
 </html>
