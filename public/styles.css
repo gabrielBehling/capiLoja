@@ -13,7 +13,7 @@ html {
 }
 
 .vr {
-  border: 1px solid #5B6557;
+  border: 0.1rem solid #5B6557;
   height: 80%;
 }
 
@@ -44,12 +44,12 @@ html {
 }
 
 .logo {
-  width: 90px;
+  width: 9rem;
 }
 
 .search-bar {
   display: flex;
-  width: 30%;
+  width: 70%;
   height: 100%;
   justify-content: center;
   place-self: center;
@@ -57,25 +57,38 @@ html {
 
 .search-bar select {
   text-align: center;
+  background-color: lightgray;
 }
 
 .search-bar input {
+  width: 100%;
   height: 4.5rem;
+}
+
+.search-bar .search-dropdown {
+  padding: 0 5px 0 0;
+  background-color: lightgray;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
 
 .search-bar select {
-  width: 4.5rem;
-  height: 4.5rem;
-  border-top-left-radius: 0.6rem;
-  border-bottom-left-radius: 0.6rem;
-}
-
-.search-dropdown {
   position: relative;
   top: 0;
   left: 0;
   display: flex;
   place-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border: none;
+}
+
+.search-bar input {
+  padding: 0 0 0 1rem;
+  font-size: 2rem;
+  border: none;
 }
 
 .search-dropdown i {
@@ -87,5 +100,22 @@ html {
 }
 
 .search-icon {
+  padding: 0 0.7rem;
+  display: flex;
   place-items: center;
+  background-color: #f5d0c5;
+  transition: background-color 0.5s ease;
+  border: none;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.search-icon a {
+  color: #000;
+  text-decoration: none;
+}
+
+.search-icon:hover {
+  background-color: #D69F7E;
+  color: pointer;
 }
