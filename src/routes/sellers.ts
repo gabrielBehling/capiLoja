@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { sellers, seller } from "../controllers/pageController";
+import { getSellers, getSeller } from "../controllers/pageController";
 
 var router = Router();
 
-router.get("/", sellers);
-router.get("/:id", seller);
+router.get("/", getSellers);
+router.get("/:id", getSeller);
 
 export default router;

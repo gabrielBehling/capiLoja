@@ -1,16 +1,16 @@
 import { Router } from 'express';
-import { home } from '../controllers/pageController';
-import { loginPage, loginUser } from '../controllers/userController';
-import { registerPage, registerUser } from '../controllers/userController';
+import { getHome } from '../controllers/pageController';
+import { getLogin, postLogin } from '../controllers/userController';
+import { getRegister, postRegister } from '../controllers/userController';
 
 var router = Router();
 
-router.get('/', home);
+router.get('/', getHome);
 
-router.get('/login', loginPage);
-router.post('/login', loginUser);
+router.get('/login', getLogin);
+router.post('/login', postLogin);
 
-router.get('/register', registerPage);
-router.post('/register', registerUser);
+router.get('/register', getRegister);
+router.post('/register', postRegister);
 
 export default router;

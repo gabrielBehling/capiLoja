@@ -2,11 +2,11 @@ import bcrypt from "bcrypt";
 import { Request, Response } from "express";
 import { getDatabase } from "../database/database";
 
-export const loginPage = (req: Request, res: Response) => {
+export const getLogin = (req: Request, res: Response) => {
 	res.render("pages/login");
 };
 
-export const loginUser = async (req: Request, res: Response) => {
+export const postLogin = async (req: Request, res: Response) => {
 	let { username, password } = req.body;
 
 	let validatedUser = await checkUser(username, password);
@@ -27,11 +27,11 @@ export const loginUser = async (req: Request, res: Response) => {
 	res.redirect("/");
 };
 
-export const registerPage = (req: Request, res: Response) => {
+export const getRegister = (req: Request, res: Response) => {
 	res.render("pages/register");
 };
 
-export const registerUser = (req: Request, res: Response) => {
+export const postRegister = (req: Request, res: Response) => {
 	let { username, password } = req.body;
 	res.cookie("username", username, {
 		maxAge: 1000 * 60 * 60 * 24 * 30,
